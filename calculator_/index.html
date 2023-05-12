@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+    <title>Calci</title>
+</head>
+<body>
+    
+    <h1>Calculator</h1>
+    <div class="container">
+
+        <input type="text" id="result" disabled>
+        <button id="clearAll" onclick="clearAll()">C</button>
+        <button id="delete" onclick="deleteResult()">D</button> 
+        <button onclick="getResult('/')">/</button><br>
+        <button onclick="getResult('7')">7</button>
+        <button onclick="getResult('8')">8</button>
+        <button onclick="getResult('9')">9</button>
+        <button onclick="getResult('*')">*</button><br>
+        <button onclick="getResult('4')">4</button>
+        <button onclick="getResult('5')">5</button>
+        <button onclick="getResult('6')">6</button>
+        <button onclick="getResult('-')">-</button><br>
+        <button onclick="getResult('1')">1</button>
+        <button onclick="getResult('2')">2</button>
+        <button onclick="getResult('3')">3</button>
+        <button onclick="getResult('+')">+</button><br>
+        <button onclick="getResult('0')">0</button>
+        <button onclick="getResult('.')">.</button>
+        <button id="calculate" onclick="calculateResult()">=</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

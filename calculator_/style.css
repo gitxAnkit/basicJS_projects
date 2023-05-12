@@ -1,0 +1,36 @@
+
+*{
+    margin:0;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 7vmax;
+    text-align: center;
+   
+}
+.container{
+   
+    
+    width: 50vmax;
+    height: 30vmax;
+    margin: 10vmax auto;
+    
+}
+input{
+    width: 48vmax;
+    height: 40px;
+    margin: 5px;
+}
+button{
+    width: 110px;
+    height: 45px;
+}
+#clearAll{
+    background-color: red;
+}
+#delete{
+    background-color: orange;
+}
+#calculate{
+    background-color: green;
+}
