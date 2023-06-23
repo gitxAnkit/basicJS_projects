@@ -24,6 +24,13 @@ function showAllTasks () {
        const btn = document.createElement("span");
        btn.setAttribute("class","deleteBtn");
        btn.innerText="-";
+       btn.addEventListener("click",() =>{
+        removeTasks();        
+        tasks.splice(index,1);
+        showAllTasks();
+        console.log(tasks);
+       }) 
+
        div.append(btn); 
        container.append(div);
     });
