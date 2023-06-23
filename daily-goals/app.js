@@ -3,8 +3,10 @@ const description = document.getElementById("description");
 const form =document.querySelector("form");
 const container =document.querySelector(".container");
 
-const tasks = [];
-
+const tasks =localStorage.getItem("tasks")?
+             JSON.parse(localStorage.getItem("tasks")) : [];
+console.log(tasks);
+showAllTasks();
 function showAllTasks () {
     tasks.forEach((value,index)=>{
        const div =document.createElement("div");
@@ -24,9 +26,11 @@ function showAllTasks () {
        const btn = document.createElement("span");
        btn.setAttribute("class","deleteBtn");
        btn.innerText="-";
+      
        btn.addEventListener("click",() =>{
         removeTasks();        
         tasks.splice(index,1);
+        localStorage.setItem("tasks",JSON.stringify(tasks));    
         showAllTasks();
         console.log(tasks);
        }) 
@@ -50,6 +54,6 @@ form.addEventListener("submit",(e) =>{
         title: title.value,
         description: description.value,
     });
-    console.log(tasks);
+    localStorage.setItem("tasks",JSON.stringify(tasks));
     showAllTasks();
 });

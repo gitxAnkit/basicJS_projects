@@ -14,6 +14,11 @@ body {
     padding: 30px;
     box-sizing: border-box;
 }
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    margin: 30px;
+}
 form{
     display: flex;
     flex-direction: column;
